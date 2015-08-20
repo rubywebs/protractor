@@ -9,7 +9,8 @@ exports.config = {
 
   // Spec patterns are relative to this directory.
   specs: [
-    'basic/synchronize_spec.js',
+    'basic/locators_spec.js',
+    // 'basic/synchronize_spec.js',
     // 'basic/*_spec.js',
   ],
 
