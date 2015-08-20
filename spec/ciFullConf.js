@@ -26,13 +26,13 @@ exports.config = {
     'selenium-version': '2.45.0',
     'chromedriver-version': '2.15',
     'platform': 'OS X 10.9'
-  }, {
-    'browserName': 'firefox',
-    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'Protractor suite tests',
-    'version': '37',
-    'selenium-version': '2.45.0'
+  // }, {
+  //   'browserName': 'firefox',
+  //   'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+  //   'build': process.env.TRAVIS_BUILD_NUMBER,
+  //   'name': 'Protractor suite tests',
+  //   'version': '37',
+  //   'selenium-version': '2.45.0'
   }],
 
   baseUrl: env.baseUrl,
