@@ -1,5 +1,8 @@
 var env = require('./environment.js');
 
+console.log('------------LEO------------');
+console.log(env.capabilities);
+
 // The main suite of Protractor tests to be run on CI servers.
 exports.config = {
   sauceUser: process.env.SAUCE_USERNAME,
@@ -19,15 +22,15 @@ exports.config = {
     'basic/exclude*.js'
   ],
 
-  // capabilities: env.capabilities,
+  capabilities: env.capabilities,
 
-  multiCapabilities: [{
-    'browserName': process.env.SELENIUM_BROWSER,
-    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'Protractor suite tests',
-    'version': process.env.SELENIUM_VERSION,
-    'platform': process.env.SELENIUM_PLATFORM,
+  // multiCapabilities: [{
+  //   'browserName': process.env.SELENIUM_BROWSER,
+  //   'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+  //   'build': process.env.TRAVIS_BUILD_NUMBER,
+  //   'name': 'Protractor suite tests',
+  //   'version': process.env.SELENIUM_VERSION,
+  //   'platform': process.env.SELENIUM_PLATFORM,
   //   // 'selenium-version': '2.45.0',
   //   // 'chromedriver-version': '2.15',
   // // }, {
@@ -37,7 +40,7 @@ exports.config = {
   // //   'name': 'Protractor suite tests',
   // //   'version': '37',
   // //   'selenium-version': '2.45.0'
-  }],
+  // }],
 
   baseUrl: env.baseUrl,
 

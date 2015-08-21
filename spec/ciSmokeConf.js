@@ -1,5 +1,8 @@
 var env = require('./environment.js');
 
+console.log('------------LEO------------');
+console.log(env.capabilities);
+
 // Smoke tests to be run on CI servers - covers more browsers than
 // ciConf.js, but does not run all tests.
 exports.config = {
@@ -14,19 +17,19 @@ exports.config = {
     // 'basic/synchronize_spec.js'
   ],
 
-  // capabilities: env.capabilities,
+  capabilities: env.capabilities,
 
   // // Two latest versions of IE, and Safari.
   // // The second latest version of Chrome and Firefox (latest versions are
   // // tested against the full suite in ciFullConf)
   // // TODO - add mobile.
-  multiCapabilities: [{
-    'browserName': process.env.SELENIUM_BROWSER,
-    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-    'build': process.env.TRAVIS_BUILD_NUMBER,
-    'name': 'Protractor smoke tests',
-    'version': process.env.SELENIUM_VERSION,
-    'platform': process.env.SELENIUM_PLATFORM,
+  // multiCapabilities: [{
+  //   'browserName': process.env.SELENIUM_BROWSER,
+  //   'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+  //   'build': process.env.TRAVIS_BUILD_NUMBER,
+  //   'name': 'Protractor smoke tests',
+  //   'version': process.env.SELENIUM_VERSION,
+  //   'platform': process.env.SELENIUM_PLATFORM,
   //   // 'selenium-version': '2.45.0',
   //   // 'chromedriver-version': '2.14',
   // }, {
@@ -66,7 +69,7 @@ exports.config = {
   // //   'version': '10',
   // //   'selenium-version': '2.45.0',
   // //   'platform': 'Windows 7'
-  }],
+  // }],
 
 
   baseUrl: env.baseUrl,
